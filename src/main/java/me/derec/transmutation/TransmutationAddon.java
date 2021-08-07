@@ -39,6 +39,16 @@ public class TransmutationAddon extends JavaPlugin implements SlimefunAddon {
         };
         SlimefunItem testWand = new SlimefunItem(transmutateCategory, transmuItemStack, RecipeType.ENHANCED_CRAFTING_TABLE, testWandRecipe);
         testWand.register(this);
+
+        //A test copper item thingy
+        SlimefunItemStack copperTest = new SlimefunItemStack("copperTransmutator",Material.DISPENSER,"Copper Transmutator", "This is item lore");
+        ItemStack[] copperTestRecipe = {
+                new ItemStack(Material.IRON_INGOT), null, new ItemStack(Material.STICK),
+                null, null, null,
+                null, null, null
+        };
+        CopperTransmutator testCopper = new CopperTransmutator(transmutateCategory, copperTest, RecipeType.ENHANCED_CRAFTING_TABLE, copperTestRecipe);
+        testCopper.register(this);
     }
 
     @Override
